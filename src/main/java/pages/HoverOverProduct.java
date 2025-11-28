@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 public class HoverOverProduct {
     private WebDriver driver;
     private By hover= By.className("product-overlay");
+    private By addProduct=By.linkText("Add to cart");
 
 
     public HoverOverProduct(WebDriver driver){
@@ -18,7 +19,11 @@ public class HoverOverProduct {
         WebElement element=driver.findElement(hover);
        Actions actions=new Actions(driver);
        actions.moveToElement(element).perform();
+    }
 
+    public ModalPage hoverOverProductModal(){
+        driver.findElement(addProduct).click();
+        return new ModalPage(driver);
     }
 
 }
