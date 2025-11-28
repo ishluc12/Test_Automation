@@ -12,6 +12,9 @@ public class SubmitFile {
 
     private By fileUploadField=By.cssSelector("#contact-us-form > div:nth-child(6) > input");
     private By fileField=By.cssSelector("#contact-us-form > div:nth-child(6)");
+    private By submitForm=By.cssSelector("#contact-us-form > div:nth-child(7) > input");
+
+
     public SubmitFile(WebDriver driver){
         this.driver=driver;
     }
@@ -35,5 +38,12 @@ public class SubmitFile {
     public void clickToUploadFile(String file){
         driver.findElement(fileUploadField).sendKeys(file);
         clickToUpload();
+    }
+
+
+
+    public AlertPage clickAlertOk(){
+        driver.findElement(submitForm).click();
+        return new AlertPage(driver);
     }
 }

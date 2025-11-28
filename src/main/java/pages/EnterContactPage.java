@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
 
 public class EnterContactPage {
     private WebDriver driver;
@@ -15,6 +16,9 @@ public class EnterContactPage {
     public EnterContactPage(WebDriver driver){
         this.driver = driver;
     }
+
+
+
 
     public List<String> getDateOfMonth(){
         Select select= new Select(driver.findElement(chooseDay));

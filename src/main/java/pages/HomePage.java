@@ -40,4 +40,9 @@ public class HomePage {
         return new HoverOverProduct(driver);
     }
 
+    public ModalPage clickToSeeModel(){
+        driver.findElement(productHover).click();
+        return new ModalPage(driver);
+    }
+
 }

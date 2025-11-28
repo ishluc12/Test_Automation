@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class HoverOverProduct {
     private WebDriver driver;
-    private By hover= By.cssSelector("body > section:nth-child(4) > div > div > div.col-sm-9.padding-right > div > div:nth-child(3) > div");
+    private By hover= By.className("product-overlay");
 
 
     public HoverOverProduct(WebDriver driver){
