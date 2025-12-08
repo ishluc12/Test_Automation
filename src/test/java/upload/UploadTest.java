@@ -15,8 +15,5 @@ public class UploadTest extends BaseTest{
         fileupload.clickToUploadFile("C:\\Users\\jluci\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-10-29 213310.png");
         var alert=fileupload.clickAlertOk();
         alert.clickOk();
-
-
-
     }
 }

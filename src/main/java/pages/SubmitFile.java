@@ -40,8 +40,6 @@ public class SubmitFile {
         clickToUpload();
     }
 
-
-
     public AlertPage clickAlertOk(){
         driver.findElement(submitForm).click();
         return new AlertPage(driver);

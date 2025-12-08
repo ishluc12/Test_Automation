@@ -10,7 +10,6 @@ public class HoverOverProduct {
     private By hover= By.className("product-overlay");
     private By addProduct=By.linkText("Add to cart");
 
-
     public HoverOverProduct(WebDriver driver){
         this.driver=driver;
     }

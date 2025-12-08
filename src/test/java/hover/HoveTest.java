@@ -13,7 +13,5 @@ public class HoveTest extends BaseTest {
         var hoverAndAddCart=hover.hoverOverProductModal();
         String getMessage= hoverAndAddCart.clickToGetMessage();
         assertTrue(getMessage.contains("Your product has been added to cart."), "Incorrect link");
-
-
     }
 }

@@ -16,10 +16,6 @@ public class EnterContactPage {
     public EnterContactPage(WebDriver driver){
         this.driver = driver;
     }
-
-
-
-
     public List<String> getDateOfMonth(){
         Select select= new Select(driver.findElement(chooseDay));
         List<WebElement> list= select.getOptions();
