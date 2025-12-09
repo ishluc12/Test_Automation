@@ -10,14 +10,15 @@ public class HoverOverProduct {
     private By hover= By.className("product-overlay");
     private By addProduct=By.linkText("Add to cart");
 
+
     public HoverOverProduct(WebDriver driver){
         this.driver=driver;
     }
 
     public void clickToHover(){
         WebElement element=driver.findElement(hover);
-       Actions actions=new Actions(driver);
-       actions.moveToElement(element).perform();
+        Actions actions=new Actions(driver);
+        actions.moveToElement(element).perform();
     }
 
     public ModalPage hoverOverProductModal(){

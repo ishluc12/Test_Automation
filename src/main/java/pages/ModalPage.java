@@ -26,4 +26,5 @@ public class ModalPage {
         WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(modal));
         return driver.findElement(modal).getText();
     }
+
 }

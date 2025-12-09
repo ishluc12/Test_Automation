@@ -9,6 +9,7 @@ public class LoginPage {
     private By enailField=By.cssSelector("#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=email]:nth-child(2)");
     private By PasswordField=By.cssSelector("#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=password]:nth-child(3)");
     private By loginButton=By.cssSelector("#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > button");
+
     public LoginPage(WebDriver driver){
         this.driver=driver;
     }
@@ -23,7 +24,8 @@ public class LoginPage {
     public void setPassword(String password){
         driver.findElement(PasswordField).sendKeys(password);
     }
-    public void clickLogin(){
+    public LandingPage clickAfterLogin(){
         driver.findElement(loginButton).click();
+        return new LandingPage(driver);
     }
 }

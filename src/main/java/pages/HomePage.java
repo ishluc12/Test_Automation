@@ -27,7 +27,7 @@ public class HomePage {
         return new CartPage(driver);
     }
     public DropDownPage clickDropDowns(){
-        driver.findElement(loginAndLogout).getText();
+        driver.findElement(loginAndLogout).click();
         return new DropDownPage(driver);
     }
 
