@@ -1,6 +1,7 @@
 package dropdown;
 
 import BaseTest.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -16,9 +17,14 @@ public class dropdownTest extends BaseTest {
 
         var contactPage = dropdownPage.clickToFillForm();
 
-        contactPage.selectDropDown("1");
+        contactPage.choseGender("Mr");
+        contactPage.SetPassword("@@Lucas1212");
+        contactPage.selectDay("1");
+        contactPage.selectMonth("January");
+        contactPage.selectYear("1990");
 
-        assertEquals(contactPage.getDateOfMonth().size(), 1);
-        assertTrue(contactPage.getDateOfMonth().contains("1"));
+        assertEquals(contactPage.selectedDay(), "1");
+        assertEquals(contactPage.selectedMonth(), "January");
+        assertEquals(contactPage.selectedYear(), "1990");
     }
 }

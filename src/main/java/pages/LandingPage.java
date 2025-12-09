@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LandingPage {
+public class    LandingPage {
     private WebDriver driver;
     private By landing= By.id("slider-carousel");
     public LandingPage(WebDriver driver) {

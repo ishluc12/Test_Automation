@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class DropDownPage {
     private WebDriver driver;
-    private By signupForm=By.cssSelector("#form > div > div > div:nth-child(3) > div");
     private By nameField=By.cssSelector(".signup-form input[type=text]");
     private By emailField=By.cssSelector(".signup-form input[type=email]");
     private By signupField=By.cssSelector(".signup-form button[type=submit]");
