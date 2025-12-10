@@ -10,12 +10,8 @@ public class AlertPage {
     }
 
 
-    public void clickCancel(){
-        driver.switchTo().alert().dismiss();
-    }
-    public GetInTouchPage clickToSuccessfull(){
+    public void clickOk(){
         driver.switchTo().alert().accept();
-        driver.findElement(By.cssSelector("h2.title.text-center")).getText();
-        return new GetInTouchPage(driver);
     }
+
 }

@@ -3,13 +3,11 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import javax.net.ssl.HostnameVerifier;
-
 public class HomePage {
     private WebDriver driver;
     private By loginAndLogout=By.cssSelector("a[href='/login']");
     private By cartLink=By.cssSelector("a[href='/view_cart']");
-    private By productHover=By.cssSelector("#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(2) > a");
+    private By productHover=By.partialLinkText("Products");
     private By contactForm= By.cssSelector("a[href='/contact_us");
 
 
@@ -35,9 +33,9 @@ public class HomePage {
         driver.findElement(contactForm).click();
         return new SubmitFile(driver);
     }
-    public HoverOverProduct moveTohover(){
+    public HoverOverProductAndScroll moveTohover(){
         driver.findElement(productHover).click();
-        return new HoverOverProduct(driver);
+        return new HoverOverProductAndScroll(driver);
     }
 
     public ModalPage clickToSeeModel(){

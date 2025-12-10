@@ -5,14 +5,15 @@ import org.openqa.selenium.WebDriver;
 
 public class SubmitFile {
     private WebDriver driver;
-    private By nameField= By.cssSelector("#contact-us-form > div:nth-child(2) > input");
-    private By emailField= By.cssSelector("#contact-us-form > div:nth-child(3) > input");
-    private By subjectField=By.cssSelector("#contact-us-form > div:nth-child(4) > input");
-    private By messageField=By.cssSelector("#message");
+    private By nameField        = By.name("name");
+    private By emailField       = By.name("email");
+    private By subjectField     = By.name("subject");
+    private By messageField     = By.id("message");
 
-    private By fileUploadField=By.cssSelector("#contact-us-form > div:nth-child(6) > input");
-    private By fileField=By.cssSelector("#contact-us-form > div:nth-child(6)");
-    private By submitForm=By.cssSelector("#contact-us-form > div:nth-child(7) > input");
+    private By fileUploadField=By.cssSelector("input[name='upload_file']");
+    private By fileField=By.className(("form-control"));
+    private By submitForm       = By.cssSelector("input[type='submit']");
+
 
 
     public SubmitFile(WebDriver driver){

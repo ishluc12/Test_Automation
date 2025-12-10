@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class HoveTest extends BaseTest {
+public class HoverAndScrollTest extends BaseTest {
     @Test
     public void hoverOverProduct(){
         var hover=homePage.moveTohover();

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage {
     private WebDriver driver;
-    private By linkToproduct= By.cssSelector("#empty_cart > p > a > u");
+    private By linkToproduct= By.cssSelector("a[href='/products']");
     public CartPage(WebDriver driver){
         this.driver=driver;
     }

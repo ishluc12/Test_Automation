@@ -1,17 +1,18 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class HoverOverProduct {
+public class HoverOverProductAndScroll {
     private WebDriver driver;
     private By hover= By.className("product-overlay");
     private By addProduct=By.linkText("Add to cart");
 
 
-    public HoverOverProduct(WebDriver driver){
+    public HoverOverProductAndScroll(WebDriver driver){
         this.driver=driver;
     }
 
@@ -22,7 +23,9 @@ public class HoverOverProduct {
     }
 
     public ModalPage hoverOverProductModal(){
-        driver.findElement(addProduct).click();
+        WebElement element =  driver.findElement(addProduct);
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+        element.click();
         return new ModalPage(driver);
     }
 

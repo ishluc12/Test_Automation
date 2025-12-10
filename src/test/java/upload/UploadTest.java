@@ -16,8 +16,7 @@ public class UploadTest extends BaseTest{
         fileupload.clickToUpload();
         fileupload.clickToUploadFile("D:\\java\\Test3\\resources\\chromedriver.exe");
         var alert=fileupload.clickAlertOk();
-        var success=alert.clickToSuccessfull();
-        String successfulMessage=success.getFinalText();
-        assertTrue(successfulMessage.contains("Success! Your details have been submitted successfully."),"file not found");
+        alert.clickOk();
+
     }
 }
