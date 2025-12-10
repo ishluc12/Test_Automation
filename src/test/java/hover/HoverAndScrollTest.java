@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class HoveTest extends BaseTest {
+public class HoverAndScrollTest extends BaseTest {
     @Test
     public void hoverOverProduct(){
         var hover=homePage.moveTohover();
@@ -13,7 +13,5 @@ public class HoveTest extends BaseTest {
         var hoverAndAddCart=hover.hoverOverProductModal();
         String getMessage= hoverAndAddCart.clickToGetMessage();
         assertTrue(getMessage.contains("Your product has been added to cart."), "Incorrect link");
-
-
     }
 }

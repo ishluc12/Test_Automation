@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class DropDownPage {
     private WebDriver driver;
-    private By signupForm=By.cssSelector("#form > div > div > div:nth-child(3) > div");
-    private By nameField=By.cssSelector("#form > div > div > div:nth-child(3) > div > form > input[type=text]:nth-child(2)");
-    private By emailField=By.cssSelector("#form > div > div > div:nth-child(3) > div > form > input[type=email]:nth-child(3)");
-    private By signupField=By.cssSelector("");
+    private By nameField=By.cssSelector(".signup-form input[type=text]");
+    private By emailField=By.cssSelector(".signup-form input[type=email]");
+    private By signupField=By.cssSelector(".signup-form button[type=submit]");
+
     public DropDownPage(WebDriver driver){
         this.driver = driver;
     }
@@ -19,7 +19,7 @@ public class DropDownPage {
         driver.findElement(emailField).sendKeys(email);
     }
     public EnterContactPage clickToFillForm(){
-        driver.findElement(signupForm).click();
+        driver.findElement(signupField).click();
         return new EnterContactPage(driver);
     }
 

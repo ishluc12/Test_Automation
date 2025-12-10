@@ -14,17 +14,14 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class ModalPage {
     private WebDriver driver;
-    private By modal=By.cssSelector("#cartModal > div > div");
-    private By goCart=By.cssSelector("#cartModal > div > div > div.modal-body > p:nth-child(2) > a > u");
+    private By modal= By.cssSelector("#cartModal p.text-center");
 
     public ModalPage(WebDriver driver){
         this.driver=driver;
     }
-
     public String clickToGetMessage(){
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
         WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(modal));
         return driver.findElement(modal).getText();
     }
-
 }
