@@ -8,8 +8,6 @@ public class AlertPage {
     public AlertPage(WebDriver driver) {
         this.driver = driver;
     }
-
-
     public void clickOk(){
         driver.switchTo().alert().accept();
     }

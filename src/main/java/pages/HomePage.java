@@ -19,7 +19,6 @@ public class HomePage {
         driver.findElement(loginAndLogout).click();
         return new LoginPage(driver);
     }
-
     public CartPage clickLink(){
         driver.findElement(cartLink).click();
         return new CartPage(driver);

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
     private WebDriver driver;
-
     private By emailField=By.cssSelector(".login-form input[type=email]");
     private By PasswordField=By.cssSelector(".login-form input[type=password]");
     private By loginButton=By.cssSelector(".login-form button[type=submit]");
@@ -13,7 +12,6 @@ public class LoginPage {
     public LoginPage(WebDriver driver){
         this.driver=driver;
     }
-
     public void setUsername(String username){
         driver.findElement(emailField).sendKeys(username);
     }

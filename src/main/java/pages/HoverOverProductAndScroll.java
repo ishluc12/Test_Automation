@@ -15,13 +15,11 @@ public class HoverOverProductAndScroll {
     public HoverOverProductAndScroll(WebDriver driver){
         this.driver=driver;
     }
-
     public void clickToHover(){
         WebElement element=driver.findElement(hover);
         Actions actions=new Actions(driver);
         actions.moveToElement(element).perform();
     }
-
     public ModalPage hoverOverProductModal(){
         WebElement element =  driver.findElement(addProduct);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);

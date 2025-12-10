@@ -23,7 +23,6 @@ public class EnterContactPage {
     public EnterContactPage(WebDriver driver){
         this.driver = driver;
     }
-
     public boolean choseGender(String gender){
         if(gender.equalsIgnoreCase("Mr")){
             WebElement male=driver.findElement(maleRadio);
@@ -36,12 +35,10 @@ public class EnterContactPage {
         }
         return false;
     }
-
     public void SetPassword(String password){
         driver.findElement(passworField).clear();
         driver.findElement(passworField).sendKeys(password);
     }
-
     public void selectDay(String day){
         new Select(driver.findElement(dayOfbirth)).selectByVisibleText(day);
     }
@@ -61,7 +58,6 @@ public class EnterContactPage {
     public String selectedYear(){
         return new Select(driver.findElement(yearOfbirth)).getFirstSelectedOption().getText();
     }
-
     public List<String> getDateOfMonth(){
 
         List<WebElement> dateOfMonth= new Select(driver.findElement(dayOfbirth)).getAllSelectedOptions();

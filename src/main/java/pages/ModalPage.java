@@ -19,11 +19,9 @@ public class ModalPage {
     public ModalPage(WebDriver driver){
         this.driver=driver;
     }
-
     public String clickToGetMessage(){
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
         WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(modal));
         return driver.findElement(modal).getText();
     }
-
 }

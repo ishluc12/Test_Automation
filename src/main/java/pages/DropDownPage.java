@@ -8,6 +8,7 @@ public class DropDownPage {
     private By nameField=By.cssSelector(".signup-form input[type=text]");
     private By emailField=By.cssSelector(".signup-form input[type=email]");
     private By signupField=By.cssSelector(".signup-form button[type=submit]");
+
     public DropDownPage(WebDriver driver){
         this.driver = driver;
     }
